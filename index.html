@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+	<title>Home - About Hacking</title>
+	<script src="js/main.js"></script>
+	<script src="js/typingCarousel.js"></script>
+	<link rel="stylesheet" href="css/main.css"></link>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+</head>
+<body onload="load()">
+	<div id="easterEgg" onclick="location.href = 'secret.html';">
+		<img src="img/easter-egg.png" alt="Easter Egg - Click Here" height="50px" width="50px" href="secret.html"></img>
+	</div>
+	<div id="cmdPrompt" style="font-size: 16px;" class="visible">
+		<p>Microsoft Windows [Version 10.0.19044.2604]</p>
+		<p>cmd.exe is (c) Microsoft Corporation. All rights reserved.</p><br>
+		<p>C:\Users\liam.vaughan><span class="txt-rotate cmdCommand" data='["render /f \"home.json\""]'></span></p>
+	</div>
+	<div id="home" class="page hidden">
+		<nav class="navBar">
+			<div class="topMenu">
+				<a onclick='addCmdLine(`["render /f \\"home.json\\""]`)' class="active">Home</a></li>
+				<div class="dropdown">
+					<button class="dropbtn">Hacking <i class="fa fa-caret-down"></i></button>
+					<div class="dropdown-content">
+						<a onclick='addCmdLine(`["render /f \\"ethicalImplications.json\\""]`)'>What are the ethical implications of hacking?</a>
+						<a onclick='addCmdLine(`["render /f \\"rolesInComputing.json\\""]`)'>What are some roles within the computing industry?</a>
+						<a onclick='addCmdLine(`["render /f \\"influencesInComputing.json\\""]`)'>What are the influence of the roles in the previous article on computer security?</a>
+						<a onclick='addCmdLine(`["render /f \\"internetRiskAndMitigation.json\\""]`)'>What are some risks of being on the Internet? How can you mitigate them?</a>
+					</div>
+				</div>
+				<div class="dropdown">
+					<button class="dropbtn">Major Vulnerabilities <i class="fa fa-caret-down"></i></button>
+					<div class="dropdown-content">
+						<a onclick='addCmdLine(`["render /f \\"aboutLog4Shell.json\\""]`); console.log(Date.now())'>What is the Log4Shell vulnerability?</a>
+						<a onclick='addCmdLine(`["render /f \\"aboutEternalBlue.json\\""]`); console.log(Date.now())'>What is the EternalBlue vulnerability?</a>
+					</div>
+				</div>
+				<div class="dropdown">
+					<button class="dropbtn">Major Ransomware Attacks <i class="fa fa-caret-down"></i></button>
+					<div class="dropdown-content">
+						<a onclick='addCmdLine(`["render /f \\"aboutWannaCry.json\\""]`); console.log(Date.now())'>What is the WannaCry ransomware attack?</a>
+						<a onclick='addCmdLine(`["render /f \\"aboutNotPetya.json\\""]`); console.log(Date.now())'>What is the NotPetya ransomware attack?</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="content">
+			<div class="container-wrapper">
+				<div class="wrapper">
+					<div class="cell" style="background-color: var(--light-accent0);">
+						<div class="cell-container">
+							<div class="cell-inner">
+								<div class="cell-text">
+									<h1>What are the ethical implications of hacking?</h1><br>
+									<!-- Excerpt !-->
+									<p>The ethical implications of hacking are</p>
+								</div>
+								<div class="cell-button">
+									<button onclick='addCmdLine(`["render /f \\"ethicalImplications.json\\""]`)' style="font-size: 0;"><span>Read On&nbsp;</span><span class="arrow">&#8674;</span></button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cell" style="background-color: var(--light-accent1);">
+						<div class="cell-container">
+							<div class="cell-inner">
+								<div class="cell-text">
+									<h1>What are some roles within the computing industry?</h1><br>
+									<!-- Excerpt !-->
+									<p></p>
+								</div>
+								<div class="cell-button">
+									<button onclick='addCmdLine(`["render /f \\"rolesInComputing.json\\""]`)' style="font-size: 0;"><span>Read On&nbsp;</span><span class="arrow">&#8674;</span></button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cell" style="background-color: var(--light-accent2);">
+						<div class="cell-container">
+							<div class="cell-inner">
+								<div class="cell-text">
+									<h1>What are the influence of the roles in the previous article on computer security?</h1><br>
+									<!-- Excerpt !-->
+									<p></p>
+								</div>
+								<div class="cell-button">
+									<button onclick='addCmdLine(`["render /f \\"influencesInComputing.json\\""]`)' style="font-size: 0;"><span>Read On&nbsp;</span><span class="arrow">&#8674;</span></button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cell" style="background-color: var(--light-accent3);">
+						<div class="cell-container">
+							<div class="cell-inner">
+								<div class="cell-text">
+									<h1>What are some risks of being on the Internet? How can you mitigate them?</h1><br>
+									<!-- Excerpt !-->
+									<p></p>
+								</div>
+								<div class="cell-button">
+									<button onclick='addCmdLine(`["render /f \\"internetRiskAndMitigation.json\\""]`)' style="font-size: 0;"><span>Read On&nbsp;</span><span class="arrow">&#8674;</span></button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cell" style="background-color: var(--light-accent1);">
+						<div class="cell-container">
+							<div class="cell-inner">
+									<div class="cell-text">
+									<h1>What is the Log4Shell vulnerability?</h1><br>
+									<!-- Excerpt !-->
+									<p>Log4Shell is a</p>	
+								</div>
+								<div class="cell-button">
+									<button onclick='addCmdLine(`["render /f \\"aboutLog4Shell.json\\""]`)' style="font-size: 0;"><span>Read On&nbsp;</span><span class="arrow">&#8674;</span></button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cell" style="background-color: var(--light-accent0);">
+						<div class="cell-container">
+							<div class="cell-inner">
+								<div class="cell-text">
+									<h1>What is the EternalBlue vulnerability?</h1><br>
+									<!-- Excerpt !-->
+									<p>Log4Shell is a</p>
+								</div>
+								<div class="cell-button">
+									<button onclick='addCmdLine(`["render /f \\"aboutEternalBlue.json\\""]`)' style="font-size: 0;"><span>Read On&nbsp;</span><span class="arrow">&#8674;</span></button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cell" style="background-color: var(--light-accent3);">
+						<div class="cell-container">
+							<div class="cell-inner">
+								<div class="cell-text">
+										<h1>What is the WannaCry ransomware attack?</h1><br>
+										<!-- Excerpt !-->
+										<p>Log4Shell is a</p>
+								</div>
+								<div class="cell-button">
+									<button onclick='addCmdLine(`["render /f \\"aboutWannaCry.json\\""]`)' style="font-size: 0;"><span>Read On&nbsp;</span><span class="arrow">&#8674;</span></button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cell" style="background-color: var(--light-accent2);">
+						<div class="cell-container">
+							<div class="cell-inner">
+								<div class="cell-text">
+									<h1>What is the NotPetya ransomware attack?</h1><br>
+									<!-- Excerpt !-->
+									<p>Log4Shell is a</p>
+								</div>
+								<div class="cell-button">
+									<button onclick='addCmdLine(`["render /f \\"aboutNotPetya.json\\""]`)' style="font-size: 0;"><span>Read On&nbsp;</span><span class="arrow">&#8674;</span></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="article" class="page hidden">
+		<nav class="navBar">
+			<div class="topMenu" id="articleNav">
+				<a onclick='addCmdLine(`["render /f \\"home.json\\""]`)'>Home</a></li>
+				<div class="dropdown">
+					<button class="dropbtn" id="navHacking">Hacking <i class="fa fa-caret-down"></i></button>
+					<div class="dropdown-content">
+						<a onclick='addCmdLine(`["render /f \\"ethicalImplications.json\\""]`)'>What are the ethical implications of hacking?</a>
+						<a onclick='addCmdLine(`["render /f \\"rolesInComputing.json\\""]`)'>What are some roles within the computing industry?</a>
+						<a onclick='addCmdLine(`["render /f \\"influencesInComputing.json\\""]`)'>What are the influence of the roles in the previous article on computer security?</a>
+						<a onclick='addCmdLine(`["render /f \\"internetRiskAndMitigation.json\\""]`)'>What are some risks of being on the Internet? How can you mitigate them?</a>
+					</div>
+				</div>
+				<div class="dropdown">
+					<button class="dropbtn" id="navVulnerabilities">Major Vulnerabilities <i class="fa fa-caret-down"></i></button>
+					<div class="dropdown-content">
+						<a onclick='addCmdLine(`["render /f \\"aboutLog4Shell.json\\""]`); console.log(Date.now())'>What is the Log4Shell vulnerability?</a>
+						<a onclick='addCmdLine(`["render /f \\"aboutEternalBlue.json\\""]`); console.log(Date.now())'>What is the EternalBlue vulnerability?</a>
+					</div>
+				</div>
+				<div class="dropdown">
+					<button class="dropbtn" id="navRansomware">Major Ransomware Attacks <i class="fa fa-caret-down"></i></button>
+					<div class="dropdown-content">
+						<a onclick='addCmdLine(`["render /f \\"aboutWannaCry.json\\""]`); console.log(Date.now())'>What is the WannaCry ransomware attack?</a>
+						<a onclick='addCmdLine(`["render /f \\"aboutNotPetya.json\\""]`); console.log(Date.now())'>What is the NotPetya ransomware attack?</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="content">
+			<div class="article-page">
+				<div onclick="" class="article-cell" id="articleLeft">
+					<a onclick="" >&#8672;</a>
+				</div>
+				<div class="article-cell" id="articleContent">
+				</div>
+				<div onclick="" class="article-cell" id="articleRight">
+					<a>&#8674;</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
