@@ -11,6 +11,7 @@ function init() {
 		console.log(divs[i].innerHTML.length);
 		divs[i].className = "frame hidden";
 	}
+	setTimeout(start, 1000)
 }
 function start() {
 	
