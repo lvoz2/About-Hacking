@@ -1,0 +1,287 @@
+* {
+	font-family: monospace;
+	margin: 0;
+}
+#cmdPrompt {
+	z-index: 0;
+	color: var(--def-light);
+	background-color: var(--def-dark);
+}
+.visible {
+	display: block !important;
+	color: var(--def-light);
+	background-color: var(--def-dark);
+	width: 100%;
+	height: 100%
+}
+.page {
+	color: var(--def-light);
+	background-color: var(--def-dark);
+	width: 100%;
+	position: absolute;
+	overflow: hidden;
+	bottom: 0;
+	height: 100%;
+	transition: 2s linear;
+}
+.page:is(.visible) {
+	z-index: 2;
+}
+.page:is(.hidden) {
+}
+.page:not(.visible) {
+	bottom: 100%;
+	height: 0;
+	z-index: 1;
+}
+body {
+	color: var(--def-light);
+	background-color: var(--def-dark);
+}
+.arrow {
+	font-size: 38.5px;
+	font-weight: 700;
+	padding-right: 0;
+}
+.cell button {
+	padding: 0px 16px;
+	border: 0;
+	background-color: var(--light-accent4);
+	color: var(--light-accent5);
+	border-radius: 8px;
+	transition-duration: 0.4s;
+	border: 2.5px solid var(--light-accent5);
+}
+button:hover:not(.dropbtn) {
+	color: var(--light-accent4);
+	background-color: var(--light-accent5);
+	border: 2.5px solid var(--light-accent4);
+}
+button span.arrow {
+	float: right;
+}
+button span:not(.arrow, .dropdown-span) {
+	padding: 14.5px 0px;
+	float: left;
+	font-size: large;
+	font-weight: 650;
+}
+.navBar {
+	float: none;
+	background-color: var(--def-light);
+	width: 100%;
+	overflow: hidden;
+}
+.topMenu {
+	color: var(--def-dark);
+	font-size: large;
+	background-color: var(--light-accent7);
+	font-weight: var(--def_nav_weight);
+	overflow: hidden;
+}
+.topMenu a {
+	float: left;
+	color: var(--def-dark);
+	background-color: var(--light-accent7);
+	text-align: center;
+	padding: 15.5px 16px;
+	text-decoration: none;
+	display: block;
+}
+.topMenu a.active, .topMenu button.active {
+	background-color: var(--def-dark);
+	color: var(--def-light);
+	font-weight: calc(var(--def_nav_weight) - 50);
+}
+.dropdown {
+	float: left;
+	overflow: hidden;
+}
+#home .dropdown-content {
+	border: 5px solid var(--light-accent6);
+}
+#home .topMenu a:hover, #home .topMenu div a:hover, #home .topMenu .active, #home .topMenu button:hover:not(.active) {
+	background-color: var(--light-accent6) !important;
+	color: var(--light-accent7) !important;
+	transition-duration: 0.5s;
+}
+#home .topMenu a, #home .topMenu div a, #home .topMenu .active:hover, #home .topMenu button:not(.active) {
+	background-color: var(--light-accent7) !important;
+	color: var(--def-dark) !important;
+}
+.dropdown .dropbtn {
+	border: none;
+	outline: none;
+	padding: 15.5px 16px;
+	margin: 0;
+	font-size: large;
+	font-weight: var(--def_nav_weight);;
+}
+.dropbtn {
+	background-color: var(--light-accent7);
+}
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: var(--light-accent7);
+	min-width: 160px;
+	z-index: 1;
+}
+.dropdown-content a {
+	float: none;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+.dropdown-content a:hover {
+	background-color: var(--def-light);
+	color: var(--def-dark);
+}
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+.sticky + .content {
+	padding-top: 50px;
+}
+.wrapper {
+	height: calc(calc(100vh - 50px) - calc(2 * var(--home-cell-gap)));
+	width: calc(100vw - calc(2 * var(--home-cell-gap)));
+	position: relative;
+	min-height: 0px;
+	min-width: 0px;
+	display: grid;
+	grid-template-columns: repeat(2, calc(calc(100vw - calc(3 * var(--home-cell-gap))) / 2));
+	grid-template-rows: repeat(4, calc(calc(calc(100vh - 50px) - calc(3 * var(--home-cell-gap))) / 2));
+	overflow-x: hidden;
+	overflow-y: auto;
+	column-gap: var(--home-cell-gap);
+	row-gap: var(--home-cell-gap);
+	padding: var(--home-cell-gap);
+}
+.wrapper > .cell {
+	
+}
+.cell {
+	width: calc(calc(calc(100vw - calc(3 * var(--home-cell-gap))) - calc(var(--home-cell-border) * 4)) / 2);
+	height: calc(calc(calc(calc(100vh - 50px) - calc(3 * var(--home-cell-gap))) - calc(var(--home-cell-border) * 4)) / 2);
+	display: table;
+	text-align: center;
+	overflow: auto;
+	border: var(--home-cell-border) double;
+	border-radius: 50px;
+}
+.cell > .cell-container {
+	vertical-align: middle;
+	display: table-cell;
+}
+.cell-container {
+	height: calc(calc(calc(calc(100vh - 50px) - calc(3 * var(--home-cell-gap))) / 2) - calc(calc(50px + 10px) * 2));
+	padding: 50px;
+	position: relative;
+}
+.cell-container p {
+	font-size: large;
+}
+.container-wrapper {
+	position: relative;
+	height: calc(calc(calc(200vh - calc(50px * 2)) - calc(5 * var(--home-cell-gap))) + calc(var(--home-cell-gap) * 3));
+}
+#home, #home .active {
+	background-color: var(--light-accent6);
+}
+.article-page {
+	display: grid;
+	grid-template-columns: 1fr var(--article-content-width) 1fr;
+	grid-template-rows: 1fr;
+	overflow-x: hidden;
+	overflow-y: auto;
+	color: var(--def-dark);
+	background-color: var(--light-accent7);
+}
+#article .topMenu, #article .dropdown .dropbtn, #article .topMenu a {
+	background-color: var(--light-accent8);
+	color: var(--def-light);
+}
+#articleContent {
+	height: calc(calc(100vh - 50px) - calc(1 * var(--article-margin-gap)));
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding: var(--article-margin-gap) 0px;
+}
+#articleContent::-webkit-scrollbar, .wrapper::-webkit-scrollbar {
+	display: none;
+}
+.article-cell:not(#articleContent) {
+	margin: 75px;
+	height: calc(calc(100vh - 50px) - calc(2 * 75px));
+}
+.article-cell:not(#articleContent) a {
+	position: absolute;
+	display: inline-block;
+	font-size: 40pt;
+	width: 50px;
+	text-align: center;
+}
+#articleLeft a {
+	top: calc(calc(100vh - 50px) / 2);
+	left: calc(calc(calc(100vw - var(--article-content-width)) / 4) - calc(50px / 2));
+}
+#articleRight a {
+	top: calc(calc(100vh - 50px) / 2);
+	right: calc(calc(calc(100vw - var(--article-content-width)) / 4) - calc(50px / 2));
+}
+#article, #article .active, #article .dropdown-content {
+	background-color: var(--light-accent7) !important;
+	color: var(--def-dark) !important;
+}
+#article .dropdown-content {
+	border: 5px solid var(--light-accent8);
+}
+#article .topMenu a:hover, #article .topMenu div a, #article .topMenu .active, #article .topMenu button:hover:not(.active), .article-cell:not(#articleContent) {
+	background-color: var(--light-accent7) !important;
+	color: var(--def-dark) !important;
+	transition-duration: 0.5s;
+}
+#article .topMenu a, #article .topMenu div a:hover, #article .topMenu .active:hover, #article .topMenu button:not(.active), .article-cell:not(#articleContent):hover {
+	background-color: var(--light-accent8) !important;
+	color: var(--light-accent7) !important;
+}
+.cell-inner {
+	display: grid;
+	width: calc(calc(calc(calc(100vw - calc(3 * var(--home-cell-gap))) - calc(4 * var(--home-cell-border))) - calc(50px * 4)) / 2);
+	height: calc(calc(calc(calc(100vh - 50px) - calc(3 * var(--home-cell-gap))) / 2) - calc(calc(50px + 10px) * 2));
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 52px;
+}
+#easterEgg {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: 100;
+	opacity: 0.5;
+}
+:root {
+	--def-light: white;
+	--def-dark: black;
+	--def_nav_weight: 600;
+	--light-accent0: darkcyan;
+	--light-accent1: cornflowerblue;
+	--light-accent2: blueviolet;
+	--light-accent3: coral;
+	--light-accent4: darkslateblue;
+	--light-accent5: cornsilk;
+	--light-accent6: darkslategray;
+	--light-accent7: ivory;
+	--light-accent8: darkolivegreen;
+	--light-accent9: ;
+	--home-cell-gap: 75px;
+	--home-cell-border: 10px;
+	--article-margin-gap: 50px;
+	--article-content-width: calc(0.45 * 100vw);
+	--navBar-gap: 5
